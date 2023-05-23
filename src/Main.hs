@@ -1,14 +1,13 @@
 module Main (main) where
 
-import Bitboard
 import Board
+import Attacks
+import Bitboard
 
 main :: IO ()
 main = do    
-    let bitboard = setSquareBits [E4, C3, F2] 0
-
-    printBitboard 0
-    printBitboard bitboard
-    printBitboard $ popSquareBit E4 bitboard
-
+    printBitboard $ maskPawnAttacks A4 White
+    printBitboard $ maskPawnAttacks H4 White
+    printBitboard $ maskPawnAttacks A4 Black
+    printBitboard $ maskPawnAttacks H4 Black
 
