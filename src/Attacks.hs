@@ -20,9 +20,10 @@ generatePawnAttacks = undefined
 maskPawnAttacks :: BoardSquare -> BoardColor -> Bitboard 
 maskPawnAttacks square color = do 
     let piece = setSquareBit square 0
-        attacks = case color of
-            White -> map (flip shiftR) [7, 9]
-            Black -> map (flip shiftL) [7, 9]
+        attacks = map (flip shifter) [7, 9]
         edges = notAFile .&. notHFile
+        shifter = case color of 
+            White -> shiftR 
+            Black -> shiftL
 
     foldl' (\acc f -> acc .|. f piece) 0 attacks .&. edges
