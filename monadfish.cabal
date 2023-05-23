@@ -18,8 +18,8 @@ executable monadfish
   hs-source-dirs:      src
   main-is:             Main.hs
   default-language:    Haskell2010
-  build-depends:       base >= 4.7 && < 5
-  other-modules:       Bitboard, Squares
+  build-depends:       base >= 4.7 && < 5, vector
+  other-modules:       Bitboard, Squares, Attacks
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
