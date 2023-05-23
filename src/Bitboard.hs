@@ -15,7 +15,7 @@ import Data.Bits
 import Data.Word (Word64)
 import Data.List (intersperse, foldl')
 
-import Squares
+import Board
 
 type Bitboard = Word64
 

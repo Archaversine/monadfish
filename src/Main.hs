@@ -1,7 +1,7 @@
 module Main (main) where
 
 import Bitboard
-import Squares
+import Board
 
 main :: IO ()
 main = do    
